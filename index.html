@@ -1,50 +1,122 @@
-<!DOCTYPE html> 
-<html lang="pt-br"> 
-<head> 
-<meta charset="UTF-8"> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Blog</title> 
-<style> 
-header{ 
-background-color: #F2F5F3; 
-color: #0FBF3E; 
-text-align: center; 
-max-width: 800px; 
-margin: 0 auto; 
-padding: 16px; 
-} 
-main{ 
-background-color: #0FBF3E; 
-color: #F2F5F3; 
-max-width: 800px; 
-margin: 0 auto; 
-padding: 16px; 
-} 
-img{ 
-width: 80px; 
-height: 80px; 
-} 
-</style> 
-</head> 
-<body> 
-<header> 
-<h1></h1> 
-<p></p> </head
-<main> 
-<img src="![Cavallari Verso](https://images.godocs.ai/d/cb77b21e-d45e-4c74-a0fa-c840f31620e7.jpg)" alt="Logotipo dinâmico e focado em ação do Cavallari Verso, destacando um lutador de Muay Thai em posição de luta"> <h2></h2> 
-<p></p> 
-<p></p> 
-<p># 🥊 Cavallari Verso - O Universo do Muay Thai
+<!DOCTYPE html>
+<html lang="pt-br">
 
-Bem-vindo ao **Cavallari Verso**, o seu espaço definitivo sobre o mundo do Muay Thai. Este blog foi criado para conectar entusiastas, praticantes e lutadores, trazendo conteúdos sobre técnicas, treinos, história e a filosofia da "Arte das Oito Armas".
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cavallari Verso - O Universo do Muay Thai</title>
+    <style>
+        header {
+            background-color: #F2F5F3;
+            color: #0FBF3E;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+        }
 
-## 🚀 O que você vai encontrar aqui:
-* 📅 Rotinas de treinos e preparação física.
-* 🥊 Tutoriais de técnicas (socos, chutes, joelhadas e cotoveladas).
-* 📜 História e tradições da cultura tailandesa.
-* 🧘 Dicas de mentalidade e disciplina marcial.
+        main {
+            background-color: #0FBF3E;
+            color: #F2F5F3;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+        }
 
----
-*Disciplina, força e honra. Explore o Cavallari Verso!*</p> </main> 
-</body> 
+        article {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 24px;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 16px;
+            border-radius: 8px;
+        }
+
+        img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .artigo-autor {
+            font-weight: bold;
+            margin: 4px 0;
+        }
+
+        button {
+            cursor: pointer;
+            padding: 6px 12px;
+            margin-right: 8px;
+            border: none;
+            border-radius: 4px;
+            background-color: #F2F5F3;
+            color: #333;
+            font-weight: bold;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>🥊 Cavallari Verso</h1>
+        <p>O seu espaço definitivo sobre o universo do Muay Thai.</p>
+    </header>
+
+    <main>
+        <article>
+            <img src="https://images.godocs.ai/d/cb77b21e-d45e-4c74-a0fa-c840f31620e7.jpg"
+                 alt="Logotipo dinâmico e focado em ação do Cavallari Verso, destacando um lutador de Muay Thai em posição de luta">
+            <div>
+                <h2>Bem-vindo ao Cavallari Verso</h2>
+                <p class="artigo-autor">Por: Cavallari Verso</p>
+                <p>Este blog foi criado para conectar entusiastas, praticantes e lutadores, trazendo conteúdos sobre técnicas, treinos, história e a filosofia da "Arte das Oito Armas".</p>
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
+            </div>
+        </article>
+
+        <article>
+            <img src="https://images.godocs.ai/d/cb77b21e-d45e-4c74-a0fa-c840f31620e7.jpg"
+                 alt="Logotipo do Cavallari Verso">
+            <div>
+                <h2>🚀 O que você vai encontrar aqui:</h2>
+                <p class="artigo-autor">Por: Cavallari Verso</p>
+                <ul>
+                    <li>📅 Rotinas de treinos e preparação física.</li>
+                    <li>🥊 Tutoriais de técnicas (socos, chutes, joelhadas e cotoveladas).</li>
+                    <li>📜 História e tradições da cultura tailandesa.</li>
+                    <li>🧘 Dicas de mentalidade e disciplina marcial.</li>
+                </ul>
+                <p><em>Disciplina, força e honra. Explore o Cavallari Verso!</em></p>
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
+            </div>
+        </article>
+    </main>
+
+    <script>
+        const botoes = document.querySelectorAll("button");
+
+        botoes.forEach(function (botao) {
+            let curtiu = false;
+            botao.addEventListener("click", function () {
+                let texto = botao.querySelector("span");
+                if (!curtiu) {
+                    texto.textContent = Number(texto.textContent) + 1;
+                    curtiu = true;
+                } else {
+                    texto.textContent = Number(texto.textContent) - 1;
+                    curtiu = false;
+                }
+            });
+        });
+    </script>
+</body>
+
 </html>
-
